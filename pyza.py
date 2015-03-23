@@ -130,10 +130,9 @@ class Track(object):
 
 class Station(object):
     
-    def __init__(self, stationID=None, name=None, songCount=None, description=None):
+    def __init__(self, stationID, name=None, songCount=None, description=None):
         self.log = logging.getLogger(self.__class__.__name__)
 
-        assert(stationID or name)
 
         self.id = stationID
         self.name = name.encode('utf8') if name else None
